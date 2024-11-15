@@ -1,6 +1,6 @@
-package com.example.opensource_blog.security;
+package com.example.opensource_blog.service.user;
 
-import com.example.opensource_blog.domain.users.User;
+import com.example.opensource_blog.domain.users.UserAccount;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,14 +8,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-public class CustomUserDetails implements UserDetails {
+public class UserInfo implements UserDetails {
 
-    private String userId;
     private String username;
     private String password;
 
-    public CustomUserDetails(User entity) {
-        userId = entity.getUserId();
+    public UserInfo(UserAccount entity) {
         username = entity.getUsername();
         password = entity.getPassword();
     }
@@ -34,7 +32,5 @@ public class CustomUserDetails implements UserDetails {
     public String getUsername() {
         return this.username;
     }
-    public String getUserId(){
-        return userId;
-    }
+
 }
