@@ -1,6 +1,5 @@
 package com.example.opensource_blog.domain.likes;
 
-import com.example.opensource_blog.domain.articles.Article;
 import com.example.opensource_blog.domain.post.Post;
 import com.example.opensource_blog.domain.users.UserAccount;
 import jakarta.persistence.*;
@@ -11,7 +10,7 @@ import lombok.ToString;
 
 @Getter
 @ToString
-@Table(name = "likes", uniqueConstraints = @UniqueConstraint(columnNames = {"post_id", "user_id"}))
+@Table(name = "likes", uniqueConstraints = @UniqueConstraint(columnNames = {"postId", "user_id"}))
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 public class Like {
@@ -22,7 +21,7 @@ public class Like {
     private Integer likeId;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "post_id", referencedColumnName = "post_id", nullable = false)
+    @JoinColumn(name = "postId", referencedColumnName = "postId", nullable = false)
     private Post post;
 
     @ManyToOne(optional = false)

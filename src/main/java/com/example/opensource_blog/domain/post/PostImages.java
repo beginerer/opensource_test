@@ -5,7 +5,7 @@ import lombok.*;
 
 @Getter
 @ToString
-@Table(name = "post_images")
+@Table(name = "postimages")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 public class PostImages {
@@ -16,7 +16,7 @@ public class PostImages {
     private Integer imageId;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "post_id", referencedColumnName = "post_id", nullable = false)
+    @JoinColumn(name = "postId", referencedColumnName = "postId", nullable = false)
     private Post post;
 
     @Column(name = "image_url", nullable = false)

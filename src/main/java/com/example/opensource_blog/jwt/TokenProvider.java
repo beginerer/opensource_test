@@ -69,11 +69,9 @@ public class TokenProvider {
                 .build()
                 .parseSignedClaims(token)
                 .getPayload();
-
         List<SimpleGrantedAuthority> authorities = Arrays.stream(claims.get(AUTHORITIES_KEY).toString().split(","))
                 .map(SimpleGrantedAuthority::new)
                 .toList();
-
         UserInfo userInfo = (UserInfo) userInfoService.loadUserByUsername(claims.getSubject());
         return new UsernamePasswordAuthenticationToken(userInfo,token,authorities);
     }
@@ -100,7 +98,4 @@ public class TokenProvider {
         }
         return false;
     }
-
-
-
 }

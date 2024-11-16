@@ -1,7 +1,7 @@
 package com.example.opensource_blog.service.user;
 
 import com.example.opensource_blog.domain.users.UserRepository;
-import com.example.opensource_blog.dto.request.ResponseLogin;
+import com.example.opensource_blog.dto.response.ResponseLogin;
 import com.example.opensource_blog.jwt.TokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

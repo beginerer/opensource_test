@@ -4,7 +4,7 @@ package com.example.opensource_blog.controller;
 import com.example.opensource_blog.controller.commons.JSONData;
 import com.example.opensource_blog.dto.request.RequestJoin;
 import com.example.opensource_blog.dto.request.RequestLogin;
-import com.example.opensource_blog.dto.request.ResponseLogin;
+import com.example.opensource_blog.dto.response.ResponseLogin;
 import com.example.opensource_blog.execeptions.BadRequestException;
 import com.example.opensource_blog.jwt.CustomJwtFilter;
 import com.example.opensource_blog.service.user.UserInfoService;

@@ -1,4 +1,4 @@
-package com.example.opensource_blog.dto.request;
+package com.example.opensource_blog.dto.response;
 
 import lombok.Builder;
 

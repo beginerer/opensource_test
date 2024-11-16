@@ -16,7 +16,7 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "post_id")
+    @Column(name = "postId", columnDefinition = "int")
     private Integer postId;
 
     @ManyToOne(optional = false)

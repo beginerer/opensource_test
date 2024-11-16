@@ -18,7 +18,7 @@ public class Comments {
     private Integer commentId;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "post_id", referencedColumnName = "post_id", nullable = false)
+    @JoinColumn(name = "postId", referencedColumnName = "postId", nullable = false)
     private Post post;
 
     @ManyToOne(optional = false)
